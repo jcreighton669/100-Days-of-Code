@@ -16,6 +16,6 @@ tip_percentage /=100
 
 each_check = ((total_bill / number_of_checks) * (1 + tip_percentage))
 
-check_with_cents = round(each_check, 2)
+check_with_cents = "{:.2f}".format(each_check)
 
 print(f"Each person whould pay: ${check_with_cents}")
