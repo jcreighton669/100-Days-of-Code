@@ -35,7 +35,10 @@ computers_choice = random.randint(0,2)
 
 player_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors."))
 
-print("""
+if (player_choice >=3 or player_choice < 0):
+    print("You typed an invalid number. You Lose!")
+else:
+    print("""
 ______ _                         _____ _           _           
 | ___ \ |                       /  __ \ |         (_)          
 | |_/ / | __ _ _   _  ___ _ __  | /  \/ |__   ___  _  ___ ___  
@@ -45,9 +48,9 @@ ______ _                         _____ _           _
                 __/ |                                          
                |___/                                           """)
 
-print(choice_options[player_choice])
+    print(choice_options[player_choice])
 
-print("""
+    print("""
  _____                             _              _____ _           _           
 /  __ \                           | |            /  __ \ |         (_)          
 | /  \/ ___  _ __ ___  _ __  _   _| |_ ___ _ __  | /  \/ |__   ___  _  ___ ___  
@@ -57,31 +60,31 @@ print("""
                       | |                                                       
                       |_|                                                       """)
 
-print(choice_options[computers_choice])
-is_draw = False
-did_player_win = False
-# choice_options = [rock, paper, scissors]
+    print(choice_options[computers_choice])
+    is_draw = False
+    did_player_win = False
+    # choice_options = [rock, paper, scissors]
 
-if (player_choice == computers_choice):
-    is_draw = True
-elif (player_choice == 0):
-    if (computers_choice == 1): 
-        did_player_win = False
-    elif (computers_choice == 2):
-        did_player_win = True
-elif (player_choice == 1):
-    if (computers_choice == 0):
-        did_player_win = True
-    elif (computers_choice == 2):
-        did_player_win = False
-elif (player_choice == 2):
-    if (computers_choice == 0):
-        did_player_win = False
-    elif (computers_choice == 1):
-        did_player_win = True
+    if (player_choice == computers_choice):
+        is_draw = True
+    elif (player_choice == 0):
+        if (computers_choice == 1): 
+            did_player_win = False
+        elif (computers_choice == 2):
+            did_player_win = True
+    elif (player_choice == 1):
+        if (computers_choice == 0):
+            did_player_win = True
+        elif (computers_choice == 2):
+            did_player_win = False
+    elif (player_choice == 2):
+        if (computers_choice == 0):
+            did_player_win = False
+        elif (computers_choice == 1):
+            did_player_win = True
 
-if is_draw:
-    print("""
+    if is_draw:
+        print("""
 ______                    
 |  _  \                   
 | | | |_ __ __ ___      __
@@ -90,9 +93,9 @@ ______
 |___/ |_|  \__,_| \_/\_/  
                           
 """)
-else:
-    if did_player_win:
-        print("""
+    else:
+        if did_player_win:
+            print("""
 ______ _                         _    _ _           
 | ___ \ |                       | |  | (_)          
 | |_/ / | __ _ _   _  ___ _ __  | |  | |_ _ __  ___ 
@@ -101,8 +104,8 @@ ______ _                         _    _ _
 \_|   |_|\__,_|\__, |\___|_|     \/  \/|_|_| |_|___/
                 __/ |                               
                |___/                                """)
-    else: 
-        print("""
+        else: 
+            print("""
  _____                             _              _    _ _           
 /  __ \                           | |            | |  | (_)          
 | /  \/ ___  _ __ ___  _ __  _   _| |_ ___ _ __  | |  | |_ _ __  ___ 
