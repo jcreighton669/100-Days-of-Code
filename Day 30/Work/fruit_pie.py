@@ -1,0 +1,14 @@
+fruits = ["Apple", "Pear", "Orange"]
+
+
+def make_pie(index):
+    try:
+        fruit = fruits[index]
+    except IndexError:
+        print("Fruit pie")
+    else:
+        print(fruit + " pie")
+
+
+for i in range(4):
+    make_pie(i)
