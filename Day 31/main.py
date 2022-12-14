@@ -41,7 +41,6 @@ def card_known():
     next_card()
 
 
-
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Flashy")
