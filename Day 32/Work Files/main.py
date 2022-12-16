@@ -13,6 +13,7 @@
 #     )
 
 import datetime as dt
+import random
 
 now = dt.datetime.now()
 year = now.year
@@ -22,3 +23,7 @@ print(day_of_week)
 
 date_of_birth = dt.datetime(year=1988, month=8, day=10)
 print(date_of_birth)
+
+
+for i in range(50):
+    print(random.randint(1, 3))
