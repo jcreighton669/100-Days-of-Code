@@ -4,7 +4,7 @@ STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 ALPHA_API_KEY = "TMRARY1TXMF4GQ5A"
 COMPANY_NAME = "Cisco Systems"
-NEWS_API_KEY = "ec719b9a2dc743a784539cd885348d83"
+NEWS_API_KEY = "ec719b9a2dc743a784539cd885348d8"
 
 
 stock_parameters = {

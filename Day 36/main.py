@@ -8,10 +8,10 @@ STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
 STOCK_API_KEY = "TMRARY1TXMF4GQ5A"
-NEWS_API_KEY = "ec719b9a2dc743a784539cd885348d83"
+NEWS_API_KEY = "ec719b9a2dc743a784539cd885348d8"
 
-TWILIO_ACCT_ID = "ACb22d8935c06d47d6a14c27d8ab672c60"
-TWILIO_AUTH_TOKEN = "bb2bb9f0d8e7ca722294ecd6c0a1171c"
+TWILIO_ACCT_ID = "ACb22d8935c06d47d6a14c27d8ab672c6"
+TWILIO_AUTH_TOKEN = "bb2bb9f0d8e7ca722294ecd6c0a1171"
 
 stock_parameters = {
     "function": "TIME_SERIES_DAILY_ADJUSTED",
