@@ -1,5 +1,6 @@
 import requests
 from datetime import datetime
+from datetime import timedelta
 
 USERNAME = "justincreighton"
 TOKEN = "daf3wfsdtsggewfdr3263sfdb"
@@ -31,16 +32,17 @@ graph_config = {
 # print(graph_response.text)
 
 pixel_add_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}"
-today = datetime(year=2023, month=1, day=11)
-today_formatted = today.strftime("%Y%m%d")
+today = datetime.today()
+yesterday = today - timedelta(days=1)
+yesterday_formatted = yesterday.strftime("%Y%m%d")
 add_params = {
-    "date": today_formatted,
-    "quantity": "2"
+    "date": yesterday_formatted,
+    "quantity": "15"
 }
-# pixel_post = requests.post(url=pixel_add_endpoint, headers=headers, json=add_params)
-# print(pixel_post.text)
+pixel_post = requests.post(url=pixel_add_endpoint, headers=headers, json=add_params)
+print(pixel_post.text)
 
-delete_pixel_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today_formatted}"
+delete_pixel_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{yesterday_formatted}"
 # delete_response = requests.delete(url=delete_pixel_endpoint, headers=headers)
 # print(delete_response.text)
 
