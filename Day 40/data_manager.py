@@ -2,6 +2,7 @@ import requests
 from pprint import pprint
 
 SHEET_API_ENDPOINT = "https://api.sheety.co/7d6aad94864a838a7fc7a9b98a0f2345/flightDeals/prices"
+USER_SHEET_ENDPOINT = "https://api.sheety.co/7d6aad94864a838a7fc7a9b98a0f2345/flightDeals/users"
 
 
 class DataManager:
@@ -26,4 +27,10 @@ class DataManager:
                 url=f"{SHEET_API_ENDPOINT}/{city['id']}",
                 json=new_data
             )
-    # This class is responsible for talking to the Google Sheet.
+
+    def get_customer_emails(self):
+        customers_endpoint = USER_SHEET_ENDPOINT
+        response = requests.get(url=customers_endpoint)
+        data = response.json()
+        self.customer_data = data["users"]
+        return self.customer_data
