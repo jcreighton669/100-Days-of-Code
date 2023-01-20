@@ -11,9 +11,7 @@ lastName = input("What is your last name?\n")
 email = input("What is your email?\n")
 email_confirmation = input("Type your email again.")
 
-
 if email == email_confirmation:
-
     requests.post(
         url=USER_SHEET_ENDPOINT,
     )

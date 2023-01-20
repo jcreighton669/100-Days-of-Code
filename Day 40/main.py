@@ -3,7 +3,6 @@ from datetime import datetime, timedelta
 from flight_search import FlightSearch
 from notification_manager import NotificationManager
 
-
 ORIGIN_CITY_IATA = "CLT"
 
 data_manager = DataManager()

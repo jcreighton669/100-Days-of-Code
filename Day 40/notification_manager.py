@@ -10,6 +10,7 @@ MAIL_PROVIDER_SMTP_ADDRESS = "smtp.gmail.com"
 MY_EMAIL = "justincreighton2006@gmail.com"
 MY_PASSWORD = "iblhtmnhdvhhzqaj"
 
+
 class NotificationManager:
     def __init__(self):
         self.client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
