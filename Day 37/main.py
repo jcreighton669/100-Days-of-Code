@@ -37,7 +37,7 @@ yesterday = today - timedelta(days=1)
 yesterday_formatted = yesterday.strftime("%Y%m%d")
 add_params = {
     "date": yesterday_formatted,
-    "quantity": "15"
+    "quantity": "10"
 }
 pixel_post = requests.post(url=pixel_add_endpoint, headers=headers, json=add_params)
 print(pixel_post.text)
