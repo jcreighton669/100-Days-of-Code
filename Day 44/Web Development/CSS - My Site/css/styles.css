@@ -1,29 +1,78 @@
 /************************************html selectors*********************************/
 body {
-    margin: 0;
+    background-color: #E4F9F5;
+    text-align:center;
+    font-family: "Merriweather", serif;
 }
 
 h1 {
-    margin: 0
+    margin: 0;
+    font-family: "Sacramento", cursive;
+}
+
+h2 {
+    font-family: "Raleway", sans-serif;
+}
+
+h3 {
+    font-family: "Raleway", sans-serif;
+}
+
+hr {
+    border-color: #66BFBF;
+    border-style: dotted none none none;
+    border-width: 5px;
+    width: 4%;
 }
 
 /************************************class selectors********************************/
+.three-d-print {
+    width: 35%
+}
+
+.bookshelf {
+    width: 25%;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 300px;
+    top: 200px;
+}
+
+.bottom-container {}
+
+.contact-me {}
+
+.footer-link {}
+
+.middle-container {}
+
+.pro {
+    text-decoration: underline;
+}
+
+.profile {}
+
+.profile-img {
+    width: 10%;
+}
+
+.skill-row {}
+
+.skills {}
+
+.top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 50px;
+}
+
 .top-container {
     background-color: #E4F9F5;
+    padding-top: 100px;
+    position: relative;
 }
 
-.blue-square {
-    background-color: blue;
-    height: 200px;
-    width: 200px;
-    margin: 0;
-}
-
-.red-square {
-    background-color: red;
-    height: 200px;
-    width: 200px;
-    margin: 0;
-}
 
 /************************************id selectors***********************************/
