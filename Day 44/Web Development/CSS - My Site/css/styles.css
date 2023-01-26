@@ -1,11 +1,19 @@
 /************************************html selectors*********************************/
 a {
     color: #11999E;
+    font-family: "Raleway", sans-serif;
+    margin: 10px 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #EAF6F6;
 }
 
 body {
-    background-color: #E4F9F5;
+    background-color: #40514E;
     font-family: "Merriweather", serif;
+    margin:0;
     text-align:center;
 }
 
@@ -13,14 +21,15 @@ h1 {
     color: #66BFBF;
     font-family: "Sacramento", cursive;
     font-size: 5em;
-    line-height: 2;
-    margin-top: 50px;
+    margin-top: 50px auto 0 auto;
 }
 
 h2 {
     color: #66BFBF;
     font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
     font-weight: normal;
+    padding-bottom: 10px;
 }
 
 h3 {
@@ -29,10 +38,14 @@ h3 {
 }
 
 hr {
-    border-color: #C1C1C1;
-    border-style: dotted none none none;
-    border-width: 5px;
+    border: dotted #EAF6F6 6px;
+    border-bottom: none;
+    margin: 100px auto;
     width: 4%;
+}
+
+p {
+    line-height: 2;
 }
 
 /************************************class selectors********************************/
@@ -44,14 +57,14 @@ hr {
 }
 
 .bottom-cloud {
-    left: 300px;
+    bottom: 300px;
+    left: 250px;
     position: absolute;
-    top: 200px;
 }
 
 .bottom-container {
     background-color: #66BFBF;
-    color: #EAF6F6;
+    padding: 50px 0 20px;
 }
 
 .btn {
@@ -82,6 +95,14 @@ hr {
 }
 
 .contact-me {
+    margin: 40px auto 60px;
+    width: 40%;
+}
+
+.copyright {
+    color: #EAF6F6;
+    font-size: 0.75rem;
+    padding: 20px 0;
 }
 
 .footer-link {
@@ -89,24 +110,19 @@ hr {
 }
 
 .middle-container {
-    background-color: white;
-    color: #40514E;
-    padding-bottom: 75px;
+    margin: 100px 0;
 }
 
 .pro {
     text-decoration: underline;
 }
 
-.profile {}
-
 .profile-img {
     width: 15%;
 }
 
 .skill-row {
-    line-height: 2;
-    margin: 150px auto;
+    margin: 100px auto;
     text-align: start;
     width: 50%;
 }
@@ -125,7 +141,7 @@ hr {
 .top-cloud {
     position: absolute;
     right: 300px;
-    top: 50px;
+    top: 40px;
 }
 
 .top-container {
