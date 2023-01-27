@@ -8,11 +8,16 @@ website_html = response.text
 
 soup = BeautifulSoup(website_html, "html.parser")
 
-all_movies = soup.find_all(name="h3", class_="title")
 
-movie_titles = [movie.getText() for movie in all_movies]
-movies = movie_titles[::-1]
+def strip_enum(title):
+    if not title[0].isdigit():
+        return title
+    return " ".join(title.split()[1:])
 
-with open("movies.txt", mode="w") as file:
-    for movie in movies:
-        file.write(f"{movie}\n")
+
+all_movies = [strip_enum(movie.getText()) for movie in soup.select("h3.title")[::-1]]
+
+# print(movies)
+with open(r"movies.txt", mode="w", encoding="ISO-8859-1") as file:
+    for index, movie in enumerate(all_movies):
+        file.write(f"{index + 1}) {movie}\n")
