@@ -4,8 +4,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 REDIRECT_URI = "https://example.com"
-SPOTIFY_ID = "a42a74a52def494399d3bec29913e44d"
-SPOTIFY_SECRET = "81fdaf2109404438a78f0fba1e654b12"
+SPOTIFY_ID = "SPOTIFY_ID"
+SPOTIFY_SECRET = "SPOTIFY_SECRET"
 
 given_date = input("Which year do you want to travel to? Type the date in this format YYYY-MM-DD: ")
 URL = f"https://www.billboard.com/charts/hot-100/{given_date}/"
