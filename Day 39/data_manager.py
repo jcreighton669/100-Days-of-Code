@@ -12,7 +12,6 @@ class DataManager:
         response = requests.get(url=SHEET_API_ENDPOINT)
         data = response.json()
         self.destination_data = data["prices"]
-        # pprint(data)
         return self.destination_data
 
     def update_destination_codes(self):
@@ -26,4 +25,4 @@ class DataManager:
                 url=f"{SHEET_API_ENDPOINT}/{city['id']}",
                 json=new_data
             )
-    # This class is responsible for talking to the Google Sheet.
+            print(response.text)
