@@ -3,13 +3,21 @@ from flask import Flask, render_template
 
 posts = requests.get("https://api.npoint.io/e9d7761bde7444819f4d").json()
 
-
 app = Flask(__name__)
 
 
 @app.route("/")
 def home():
     return render_template("index.html", all_posts=posts)
+
+
+@app.route("/post/<int:index>")
+def show_post(index):
+    requested_post = None
+    for blog_post in posts:
+        if blog_post["id"] == index:
+            requested_post = blog_post
+    return render_template("post.html", post=requested_post)
 
 
 @app.route("/about")
@@ -20,15 +28,6 @@ def show_about():
 @app.route("/contact")
 def show_contact():
     return render_template("contact.html")
-
-
-@app.route("/post/<int:index>")
-def show_post(index):
-    request_post = None
-    for blog in posts:
-        if blog["id"] == index:
-            request_post = blog
-    return render_template("post.html", post=request_post)
 
 
 if __name__ == "__main__":
