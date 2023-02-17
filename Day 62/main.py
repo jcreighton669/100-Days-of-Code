@@ -39,11 +39,11 @@ def home():
 	return render_template("index.html")
 
 
-@app.route('/add')
+@app.route('/add', methods=["GET", "POST"])
 def add_cafe():
 	form = CafeForm()
 	if form.validate_on_submit():
-		with open("cafe-data.csv", mode="a") as csv_file:
+		with open("cafe-data.csv", mode="a", encoding="utf8") as csv_file:
 			csv_file.write(
 				f"\n{form.cafe.data}, {form.location.data}, {form.open.data}, {form.close.data}, {form.coffee_rating.data}, {form.wifi_rating.data}, {form.power_rating.data}")
 		return redirect(url_for('cafes'))
